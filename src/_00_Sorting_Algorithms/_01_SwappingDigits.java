@@ -35,7 +35,7 @@ class _01_SwappingDigits {
 	// of order, swap them. Repeat this until the array is in order.
 	public static void sortIntArray(int[] arr) {
 		for(int i = 0; i < arr.length-1; i++) {
-			for(int j = i+1; i< arr.length; j++) {
+			for(int j = i+1; j < arr.length; j++) {
 				if(arr[i] > arr[j]) {
 					int temp = arr[i];
 					arr[i] = arr[j];
@@ -50,6 +50,10 @@ class _01_SwappingDigits {
 	// *Hint* it helps to sort it first.
 	// *Double Hint* Use the method you already wrote in step 2 to sort it
 	public static int findMiddle(int[] arr) {
-		return 0;
+		sortIntArray(arr);
+		int distance = arr.length /2;
+		int middle = arr[distance];
+		return middle;
 	}
+	
 }
