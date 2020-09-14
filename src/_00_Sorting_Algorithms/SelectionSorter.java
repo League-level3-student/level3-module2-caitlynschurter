@@ -24,15 +24,15 @@ public class SelectionSorter extends Sorter {
 				if (array[j] < array[index]) {
 					index = j;
 				}
-
-				// 5. swap the array element at index with the array element at i
-				int temp = array[index];
-				array[index] = array[i];
-				array[i] = temp;
 			}
+			// 5. swap the array element at index with the array element at i
+			int temp = array[index];
+			array[index] = array[i];
+			array[i] = temp;
+
 			display.updateDisplay();
 		}
 		display.updateDisplay();
 	}
-	
+
 }
