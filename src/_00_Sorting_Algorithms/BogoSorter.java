@@ -28,7 +28,9 @@ public class BogoSorter extends Sorter {
 			int temp = array[i];
 			array[i] = array[j];
 			array[j] = temp;
+			
+			display.updateDisplay();
 		}
-		display.updateDisplay();
+		
 	}
 }
