@@ -9,11 +9,21 @@ import org.junit.Test;
 public class _01_SearchingAndSortingAlgorithms {
 
 	/**
-	 * Create the methods in the Algorithm class so that it will make the following tests pass. When you get a green bar, uncomment the next test until you have
-	 * solved them all. Expand your vocabulary while you're at it.
+	 * Create the methods in the Algorithm class so that it will make the following tests pass. When you get a green bar, 
+	 * uncomment the next test until you have solved them all. Expand your vocabulary while you're at it.
 	 **/
 
 	/* 1. Create a method that will find and return the first index of a broken egg */
+	/**Yes, there is still an error here. Re-learn how lists work, and you should be good, Future-Cat :3 **/
+	
+	private static boolean findBrokenEgg(String<>, String x) {
+		for(int i = 0; i < x; i++) {
+			if(x.equals("whole")) {
+				return false;
+			}
+			return true;
+		}
+	}
 	@Test
 	public void testSearch() {
 		List<String> eggs = Arrays.asList(new String[] { "whole", "whole", "whole", "whole", "cracked", "whole", "whole", "whole",
