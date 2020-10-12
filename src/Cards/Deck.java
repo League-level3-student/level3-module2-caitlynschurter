@@ -7,7 +7,7 @@ public class Deck extends ArrayList<Card> {
 	// ArrayList<Card> _cards;
 
 	public Deck() {
-		for (int i = Card.MIN_VALUE; i < Card.MAX_VALUE; i++) {
+		for (int i = Card.MIN_VALUE; i <= Card.MAX_VALUE; i++) {
 			Card c = new Card(i, Card.Suits.CLUBS);
 			Card d = new Card(i, Card.Suits.DIAMONDS);
 			Card h = new Card(i, Card.Suits.HEARTS);
@@ -32,8 +32,8 @@ public class Deck extends ArrayList<Card> {
 		}
 	}
 
-	public ArrayList<Card> deal(int count) {
-		ArrayList<Card> dealt = new ArrayList<Card>();
+	public Hand deal(int count) {
+		Hand dealt = new Hand();
 		if (count <= size()) {
 			for (int i = 0; i < count; i++) {
 				dealt.add(this.remove(0));

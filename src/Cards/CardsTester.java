@@ -12,18 +12,20 @@ public class CardsTester {
 			System.out.println(c);
 		}
 
-		System.out.println("=================");
+		System.out.println("========================");
 		d.shuffle();
 		for (Card c : d) {
 			System.out.println(c);
 		}
 
-		ArrayList<Card> hand = d.deal(5);
-		System.out.println("==================");
-		for (Card c : hand) {
-			System.out.println(c);
-		}
-		
+		System.out.println("Deck size: " + d.size());
+		Hand hand = d.deal(5);
+		System.out.println("=======================");
+		// for (Card c : hand) {
+		// System.out.println(c);
+		// }
+		System.out.println(hand);
+
 		System.out.println(d.size());
 
 	}
