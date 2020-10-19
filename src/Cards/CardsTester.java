@@ -19,14 +19,20 @@ public class CardsTester {
 		}
 
 		System.out.println("Deck size: " + d.size());
-		Hand hand = d.deal(5);
+		Hand hand = d.dealPokerHand();
 		System.out.println("=======================");
 		// for (Card c : hand) {
 		// System.out.println(c);
 		// }
+		
 		System.out.println(hand);
-
-		System.out.println(d.size());
+		
+		System.out.println("Deck size: " + d.size());
+		
+		System.out.println("====================");
+		PokerHand p = (PokerHand)hand;
+		p.sort();
+		System.out.println(p);
 
 	}
 }

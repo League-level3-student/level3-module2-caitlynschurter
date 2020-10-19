@@ -31,11 +31,20 @@ public class Algorithms {
 		return tallest;
 	}
 	
-	public static int findLongestWord(List<String> list) {
+	public static String findLongestWord(List<String> list) {
 		int longest = 0;
+		String word = "";
 		for(int i = 0; i < list.size(); i++) {
-			//if(list.get(i).getch)
+			if(list.get(i).length() > longest) {
+				longest = list.get(i).length();
+				word = list.get(i);
+			}
 		}
-		return -1;
+		return word;
+	}
+
+	public static Object containsSOS(List<String> message1) {
+		
+		return null;
 	}
 }

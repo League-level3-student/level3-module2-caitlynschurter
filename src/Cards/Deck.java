@@ -42,4 +42,14 @@ public class Deck extends ArrayList<Card> {
 		return dealt;
 	}
 
+	public PokerHand dealPokerHand() {
+		PokerHand dealt = new PokerHand();
+		if (5 <= size()) {
+			for (int i = 0; i < 5; i++) {
+				dealt.add(this.remove(0));
+			}
+		}
+		return dealt;
+	}
+
 }
