@@ -43,8 +43,26 @@ public class Algorithms {
 		return word;
 	}
 
-	public static Object containsSOS(List<String> message1) {
+	public static boolean containsSOS(List<String> message) {
+			if(message.contains("... --- ...")) {
+				return true;
+			}
 		
-		return null;
+		return false;
+	}
+	
+	public static List<Double> sortScores(List<Double> results) {
+		for(int i = 0; i < results.size()-1; i++) {
+			for(int j = i+1; j <results.size(); j++) {
+				double ix = results.get(i);
+				double jx = results.get(j);
+				if(ix > jx) {
+					results.set(i, jx);
+					results.set(j, ix);
+				}
+			}
+		}
+		
+		return results;
 	}
 }
