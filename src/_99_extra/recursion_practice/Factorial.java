@@ -13,7 +13,13 @@ public class Factorial {
 			//2. return 1
 		
 			//3. else return n * factorial(n-1)
-		return 0;
+		if(n == 0) {
+			return 1;
+		}
+		
+		else {
+			return n*factorial(n-1);
+		}
 	}
 	
 	public static void main(String[] args) {
