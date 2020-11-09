@@ -4,7 +4,7 @@ public class PokerHand extends Hand {
 
 	public enum HandTypes {
 		Nothing, Pair, JacksOrBetter, ThreeOfAKind, Straight, Flush, 
-		FullHouse, FourOfAKind, StraightFlush, RoyalStraightFlush
+		FullHouse, TwoPairs, FourOfAKind, StraightFlush, RoyalStraightFlush
 	}
 
 	private boolean hasJacksOrBetter() {
