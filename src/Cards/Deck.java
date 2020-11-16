@@ -3,22 +3,22 @@ package Cards;
 import java.util.ArrayList;
 import java.util.Random;
 
+// Is-a relationship: 
 public class Deck extends ArrayList<Card> {
-	// ArrayList<Card> _cards;
-
+	// Has-a relationship: private ArrayList<Card> _cards;
 	public Deck() {
 		for (int i = Card.MIN_VALUE; i <= Card.MAX_VALUE; i++) {
 			Card c = new Card(i, Card.Suits.CLUBS);
 			Card d = new Card(i, Card.Suits.DIAMONDS);
 			Card h = new Card(i, Card.Suits.HEARTS);
 			Card s = new Card(i, Card.Suits.SPADES);
-			add(c);
+			this.add(c);
 			add(d);
 			add(h);
 			add(s);
 		}
 	}
-
+	
 	public void shuffle() {
 		Random rnd = new Random();
 		for (int i = 0; i < 100000; i++) {
@@ -31,25 +31,32 @@ public class Deck extends ArrayList<Card> {
 			}
 		}
 	}
-
+	
 	public Hand deal(int count) {
 		Hand dealt = new Hand();
 		if (count <= size()) {
-			for (int i = 0; i < count; i++) {
+			for(int i = 0; i < count; i++) {
 				dealt.add(this.remove(0));
 			}
 		}
 		return dealt;
 	}
-
+	
+	public Card dealCard() {
+		if (size() > 0) {
+			return this.remove(0);
+		}
+		return null;
+	}
+	
 	public PokerHand dealPokerHand() {
 		PokerHand dealt = new PokerHand();
 		if (5 <= size()) {
-			for (int i = 0; i < 5; i++) {
+			for(int i = 0; i < 5; i++) {
 				dealt.add(this.remove(0));
 			}
 		}
+		dealt.sort();
 		return dealt;
 	}
-
 }

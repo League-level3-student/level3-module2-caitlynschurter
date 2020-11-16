@@ -8,9 +8,16 @@ public class StringTrimmer {
 		//1. If there are no removes left
 			//2.  return the string
 		
-		//3. Else you need to substring the string by 1, reduce removesLeft by 1, and then return both. 
+		if(removesLeft == 0) {
+			return str;
+		}
 		
-		return null;
+		//3. Else you need to substring the string by 1, reduce removesLeft by 1, and then return both. 
+		else {
+			String trimmed = str.substring(0, str.length()-1);
+			removesLeft--;
+			return trimString(trimmed, removesLeft);
+		}
 	}
 	
 	public static void main(String[] args) {

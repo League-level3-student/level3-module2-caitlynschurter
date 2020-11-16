@@ -43,7 +43,14 @@ public class RecursionMath {
 
 	// 8. Try this one on your own!
 	public static int recursivePower(int number, int power) {
-		return 0;
+		if(power == 0) {
+			return 1;
+		}
+		
+		
+		else {
+			return number * recursivePower(number, power - 1);
+		}
 
 	}
 
@@ -70,7 +77,11 @@ public class RecursionMath {
 	@Test
 	void testPower() {
 		// 7 Add JUnit tests to test your method
-
+		assertEquals(19, recursivePower(19, 1));
+		assertEquals(64, recursivePower(8, 2));
+		assertEquals(343, recursivePower(7, 3));
+		assertEquals(81, recursivePower(3, 4));
+		assertEquals(256, recursivePower(2, 8));
 	}
 
 }
